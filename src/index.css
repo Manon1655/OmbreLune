@@ -1,0 +1,102 @@
+:root {
+  /* typography */
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Theme variables (centralized) */
+  --bg: #fbf9f6;
+  --bg-glass: rgba(251,249,246,0.88);
+
+  --ink: #0f1814;
+  --ink-mid: #3a4a3b;
+  --ink-light: #7d8b7a;
+
+  --accent: #275133;
+  --accent-2: #3f6f46;
+  --accent-soft: #e9f3ea;
+
+  --gold: #b88f34;
+
+  --border: rgba(16,24,20,.06);
+  --border-strong: rgba(16,24,20,.12);
+
+  --shadow-sm: 0 3px 10px rgba(15,20,16,.06);
+  --shadow-md: 0 10px 36px rgba(15,20,16,.10);
+  --ease: cubic-bezier(.25,.8,.25,1);
+
+  /* layout */
+  --nav-height: 72px;
+  --annonce-height: 44px;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  /* leave space for fixed navbar + announcement */
+  padding-top: calc(var(--nav-height) + var(--annonce-height));
+  background: #ffffff !important;
+}
+
+@media (max-width: 520px) {
+  /* announcement hidden on small screens so reduce offset */
+  body { padding-top: var(--nav-height); }
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  padding: 0.56em 1em;
+  font-size: 0.98em;
+  font-weight: 600;
+  font-family: inherit;
+  background-color: #fff;
+  color: var(--ink);
+  cursor: pointer;
+  transition: transform .12s var(--ease), box-shadow .12s var(--ease), background .12s var(--ease);
+  box-shadow: var(--shadow-sm);
+}
+button:hover {
+  transform: translateY(-2px);
+  background: var(--accent-soft);
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+

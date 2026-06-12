@@ -1,0 +1,373 @@
+/* navbar uses centralized variables declared in index.css */
+
+/* NAVBAR */
+
+.nv{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:1100;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 28px;
+  height:var(--nav-height);
+
+  background: linear-gradient(180deg, var(--bg) 0%, #fff 100%);
+  border-bottom:1px solid var(--border);
+
+  transition:all .35s var(--ease);
+}
+
+/* SCROLL EFFECT (glass + depth) */
+.nv--scrolled{
+  background:var(--bg-glass);
+  backdrop-filter: blur(8px) saturate(1.15);
+  box-shadow:0 10px 30px rgba(10,14,12,.08);
+  border-bottom:1px solid var(--border-strong);
+}
+
+/* container to center navbar content */
+.nv-inner{
+  max-width:1200px;
+  width:100%;
+  margin:0 auto;
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+}
+
+/* announce band and main bar */
+.nv-band{ display:none; }
+
+/* Announcement bar positioned below navbar */
+.nv-annonce{
+  position:fixed; left:0; right:0; top:var(--nav-height); z-index:990;
+  background:linear-gradient(90deg,var(--accent) 0%, var(--accent-2) 100%);
+  color:#fff; padding:8px 20px; display:flex; align-items:center; justify-content:center; gap:12px; font-size:13px;
+  height:var(--annonce-height); box-shadow:0 6px 18px rgba(15,20,16,.06);
+}
+.nv-annonce .nv-band__spark{ opacity:.95 }
+.nv-annonce .nv-band__text{ max-width:1000px; width:100%; display:flex; align-items:center; justify-content:space-between; gap:12px }
+.nv-annonce .nv-band__cta{ color:rgba(255,255,255,.95); text-decoration:underline; cursor:pointer }
+.nv-bar{ display:flex; align-items:center; gap:14px; justify-content:space-between; }
+
+/* accessibility focus styles */
+.nv-link:focus-visible, .nv-icon-btn:focus-visible, .nv-login:focus-visible {
+  outline: 3px solid rgba(45,90,40,0.14);
+  outline-offset: 3px;
+  border-radius: 10px;
+}
+
+/* LOGO */
+
+.nv-logo{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  text-decoration:none;
+}
+
+.nv-logo__mark{
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  border:2px solid var(--accent);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:serif;
+  font-size:20px;
+  font-weight:600;
+  color:var(--accent);
+
+  transition:all .35s var(--spring);
+}
+
+/* hover plus premium */
+.nv-logo:hover .nv-logo__mark{
+  background:var(--accent-2);
+  color:#fff;
+  transform:rotate(-6deg) scale(1.08);
+  box-shadow:0 0 0 6px rgba(39,81,51,.12);
+}
+
+.nv-logo__name{
+  font-family:serif;
+  font-size:20px;
+  color:var(--ink);
+  letter-spacing:.01em;
+  font-weight:600;
+}
+
+.nv-logo__tag{
+  font-size:9px;
+  color:var(--ink-mid);
+  letter-spacing:.22em;
+  text-transform:uppercase;
+}
+
+/* NAV LINKS */
+
+.nv-nav{
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+
+.nv-nav .nv-link{ color:var(--ink); }
+
+.nv-link{
+  position:relative;
+  padding:4px 8px;
+  border-radius:8px;
+
+  font-size:14px;
+  font-weight:600;
+  color:var(--ink-mid);
+
+  background:none;
+  border:none;
+  cursor:pointer;
+
+  transition:color .16s var(--ease), transform .16s var(--ease), box-shadow .16s var(--ease);
+}
+
+/* hover plus subtil */
+.nv-link{
+  transition: color .14s, background .14s, transform .14s;
+}
+.nv-link:hover{
+  color:var(--accent);
+  background: rgba(39,81,51,0.03);
+  box-shadow: none;
+  transform:translateY(-1px);
+}
+
+/* état actif amélioré */
+.nv-link--active,
+.nv-link--open{
+  background: linear-gradient(180deg, var(--accent) 0%, var(--accent-2) 100%);
+  color:#fff !important;
+  font-weight:600;
+  box-shadow:0 8px 24px rgba(39,81,51,.12);
+}
+
+.nv-link--open .nv-link__chev{ transform: rotate(180deg); }
+
+/* underline animation clean */
+.nv-link::after{
+  content:"";
+  position:absolute;
+  bottom:-6px;
+  left:50%;
+  transform:translateX(-50%);
+  width:0;
+  height:2px;
+  border-radius:2px;
+  background:var(--accent);
+  transition:width .25s var(--ease);
+}
+
+.nv-link:hover::after{
+  width:60%;
+}
+
+/* RIGHT */
+
+.nv-right{
+  display:flex;
+  align-items:center;
+  gap:16px;
+}
+
+/* ICON BUTTON */
+
+.nv-icon-btn{
+  display:inline-grid; place-items:center; width:30px; height:30px;
+  border-radius:6px; background:transparent; border:1px solid rgba(16,24,20,.02);
+  color:var(--ink); cursor:pointer; transition:background .12s var(--ease), color .12s var(--ease), transform .12s var(--ease);
+}
+.nv-icon-btn svg{ width:14px; height:14px; stroke:currentColor; fill:none; }
+.nv-icon-btn:hover{ background:rgba(39,81,51,0.04); border-color:transparent; color:var(--accent); transform:translateY(-1px); box-shadow:none; }
+.nv-icon-btn:hover svg{ stroke:currentColor; }
+
+/* ensure wrappers are positioned for badges */
+.nv-icon-wrap{ position:relative; display:inline-block; }
+
+/* badges */
+.nv-badge{
+  position:absolute; top:6px; right:6px; min-width:16px; height:16px; padding:0 5px;
+  border-radius:999px; display:inline-grid; place-items:center; font-size:11px; font-weight:700;
+  color:#fff; background:var(--accent); box-shadow:none;
+}
+.nv-badge--gold{ background:var(--gold); }
+.nv-badge--rose{ background:#b03838; }
+
+/* cart button */
+.nv-cart-btn{
+  display:inline-flex; align-items:center; gap:6px; padding:3px 6px; border-radius:8px;
+  background:transparent; border:1px solid rgba(16,24,20,.02); color:var(--ink); cursor:pointer;
+  box-shadow:none; min-width:56px;
+}
+.nv-cart-btn svg{ width:13px; height:13px; stroke:currentColor; }
+.nv-cart-empty-label{ color:var(--ink-mid); font-size:12px; }
+.nv-cart-pill{ background:var(--accent); color:#fff; padding:2px 6px; border-radius:999px; font-size:11px; font-weight:700; }
+.nv-cart-total{ font-size:12px; color:var(--ink-mid); }
+.nv-cart-btn:hover{ background:rgba(39,81,51,0.03); color:var(--accent); transform:translateY(-1px); }
+
+/* avatar */
+.nv-ava{
+  width:40px; height:40px; border-radius:50%; display:grid; place-items:center;
+  background:var(--accent-soft); color:var(--accent); border:1px solid rgba(16,24,20,.04); font-weight:700;
+}
+.nv-ava--open{ box-shadow:0 8px 24px rgba(39,81,51,.12); }
+
+/* login link with visible icon */
+.nv-login{ display:inline-flex; align-items:center; gap:6px; color:var(--ink); text-decoration:none; padding:4px 6px; border-radius:8px; border:1px solid rgba(16,24,20,.02); background:transparent; }
+.nv-login svg{ width:14px; height:14px; stroke:currentColor; }
+.nv-login:hover{ background:rgba(39,81,51,0.04); color:var(--accent); box-shadow:none; }
+
+/* emphasize logo */
+.nv-logo__name{ font-size:22px; font-weight:700; }
+
+/* subtle separator */
+.nv-sep{ width:1px; height:36px; background:transparent; border-left:1px solid rgba(16,24,20,.04); margin:0 6px; }
+
+/* CTA LOGIN */
+
+.nv-cta{
+  padding:3px 6px;
+  border-radius:999px;
+  border:1.5px solid var(--accent);
+
+  background:transparent;
+  color:var(--accent);
+
+  font-size:13px;
+  font-weight:700;
+  cursor:pointer;
+
+  box-shadow:none;
+}
+
+/* Hamburger and mobile menu */
+.nv-hamburger{
+  display:none;
+  width:42px; height:42px; align-items:center; justify-content:center;
+  border-radius:8px; background:transparent; border:1px solid var(--border);
+  cursor:pointer; color:var(--ink);
+}
+.nv-hamburger svg{ stroke:var(--ink); }
+.nv-hamburger.is-open{ background:var(--accent); color:#fff; border-color:var(--accent); }
+
+.nv-mobile-menu{
+  display:none;
+  position:fixed; inset:72px 12px auto 12px; /* beneath navbar */
+  background:#fff; border-radius:10px; box-shadow:var(--shadow-md); padding:12px;
+  z-index:1500; max-width:420px; width:calc(100% - 24px);
+}
+.nv-mobile-menu .nv-mobile-links{ display:flex; flex-direction:column; gap:8px; }
+.nv-mobile-menu .nv-mobile-links .nv-link{ padding:12px 14px; border-radius:8px; background:transparent; display:block; text-align:left; }
+.nv-mobile-menu .nv-mobile-user{ margin-top:12px; border-top:1px dashed var(--border); padding-top:12px; }
+
+@media (max-width: 920px){
+  .nv-nav{ display:none; }
+  .nv-hamburger{ display:inline-grid; place-items:center; }
+  .nv-inner{ padding:8px 12px; }
+  .nv{ padding:0 12px; }
+}
+
+@media (max-width: 520px){
+  .nv-mega{ display:none; }
+  .nv-band{ display:none; }
+}
+  transition:all .25s var(--ease);
+}
+
+/* effet inversé au hover */
+.nv-cta:hover{
+  background:transparent;
+  color:var(--sage);
+  transform:translateY(-1px);
+}
+
+/* Inner button elements */
+.nv-link__chev{ display:inline-flex; align-items:center; margin-left:8px; width:16px; height:16px; }
+.nv-link__dot{ display:inline-block; width:8px; height:8px; border-radius:50%; background:var(--accent); margin-left:8px; vertical-align:middle; }
+.nv-link__dot[aria-hidden="true"]{ opacity:.9 }
+
+.nv-cta:hover{ background:var(--accent); color:#fff; }
+
+/* MEGA MENU */
+
+.nv-mega{
+  position:fixed;
+  top:64px;
+  left:0;
+  right:0;
+
+  background:#fff;
+  border-bottom:1px solid var(--border-strong);
+
+  box-shadow:var(--shadow-lg);
+
+  animation:megaFade .25s var(--ease);
+}
+
+@keyframes megaFade{
+  from{
+    opacity:0;
+    transform:translateY(-10px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+.nv-mega-inner{
+  max-width:1100px;
+  margin:auto;
+  display:flex;
+  gap:60px;
+  padding:20px 28px;
+}
+
+/* MEGA LINKS */
+
+.nv-mega-inner .nv-mega-col{ min-width:160px; }
+.nv-mega-inner .nv-mega-link{ display:block; padding:8px 6px; color:var(--ink-mid); text-align:left; border-radius:6px; }
+.nv-mega-inner .nv-mega-link:hover{ color:var(--accent); background:transparent; transform:none; }
+.nv-mega-inner .nv-mega-link__hint{ display:block; font-size:12px; color:var(--ink-light); margin-top:6px; }
+
+/* Notification / Panel styles */
+.nv-panel{ min-width:240px; max-width:320px; background:#fff; border-radius:10px; padding:8px; box-shadow:0 8px 20px rgba(10,14,12,.05); font-size:13px; }
+.nv-panel .nv-ph{ display:flex; align-items:center; justify-content:space-between; margin-bottom:6px; }
+.nv-ph__title{ font-weight:700; color:var(--ink); font-size:14px }
+.nv-ph__badge{ font-size:12px; color:var(--ink-mid); }
+
+.nv-notif-item{ display:flex; gap:8px; align-items:flex-start; padding:6px; border-radius:8px; background:transparent; border:none; width:100%; text-align:left; }
+.nv-notif-item--unread{ background:rgba(39,81,51,0.04); }
+.nv-notif-ico{ width:28px; height:28px; border-radius:6px; display:grid; place-items:center; background:var(--accent); color:#fff; font-size:14px; }
+.nv-notif-content{ flex:1; }
+.nv-notif-text{ margin:0; font-size:13px; color:var(--ink); }
+.nv-notif-sub{ display:block; font-size:11px; color:var(--ink-mid); margin-top:4px; }
+.nv-notif-time{ font-size:11px; color:var(--ink-light); margin-left:8px; }
+.nv-notif-dot{ width:7px; height:7px; border-radius:50%; background:var(--accent); }
+.nv-panel-foot{ margin-top:6px; border-top:1px solid var(--border); padding-top:6px; display:flex; justify-content:center; }
+.nv-panel-foot-btn{ background:transparent; border:none; color:var(--accent); cursor:pointer; font-weight:700; font-size:13px }
+
+/* make sure svg icons in logo/login are dark */
+.nv-logo svg, .nv-login svg { stroke:var(--ink); }
+
+/* login link */
+.nv-login{ display:inline-flex; align-items:center; gap:6px; color:var(--ink-mid); text-decoration:none; padding:4px 6px; border-radius:8px; }
+.nv-login:hover{ background:rgba(39,81,51,0.06); color:var(--accent); }
+
+/* badges compact */
+.nv-badge{ min-width:18px; height:18px; padding:0 6px; font-size:12px; }
+
+/* separator */
+.nv-sep{ width:1px; height:28px; background:var(--border); margin:0 10px; }

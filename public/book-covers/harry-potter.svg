@@ -1,0 +1,39 @@
+<svg width="200" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2C3E50;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1A1F36;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#D4AF37;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFE4B5;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Book cover background -->
+  <rect width="200" height="300" fill="url(#grad1)"/>
+  
+  <!-- Lightning effect -->
+  <path d="M 80 20 L 95 60 L 70 70 L 100 120" stroke="#FFD700" stroke-width="3" fill="none" opacity="0.8"/>
+  <path d="M 120 25 L 105 65 L 130 75 L 100 130" stroke="#FFA500" stroke-width="2" fill="none" opacity="0.6"/>
+  
+  <!-- Magical aura -->
+  <circle cx="100" cy="100" r="50" fill="#D4AF37" opacity="0.15"/>
+  <circle cx="100" cy="100" r="40" fill="#FFD700" opacity="0.1"/>
+  
+  <!-- Stars scattered -->
+  <circle cx="25" cy="30" r="1.5" fill="#FFE4B5"/>
+  <circle cx="175" cy="40" r="1.5" fill="#FFE4B5"/>
+  <circle cx="30" cy="140" r="1" fill="#FFE4B5"/>
+  <circle cx="170" cy="150" r="1" fill="#FFE4B5"/>
+  
+  <!-- Castle silhouette -->
+  <polygon points="50,160 60,130 70,140 80,120 90,135 100,110 110,135 120,120 130,140 140,130 150,160" fill="#1A1F36" opacity="0.7"/>
+  
+  <!-- Title box -->
+  <rect x="10" y="200" width="180" height="90" fill="rgba(0,0,0,0.8)" rx="5"/>
+  <text x="100" y="232" font-family="Georgia, serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#FFD700">HARRY</text>
+  <text x="100" y="255" font-family="Georgia, serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#FFD700">POTTER</text>
+  <text x="100" y="275" font-family="Georgia, serif" font-size="10" text-anchor="middle" fill="#E8D5B7">J.K. Rowling</text>
+  <text x="100" y="285" font-family="Georgia, serif" font-size="8" text-anchor="middle" fill="#D4AF37">À l'école de magie</text>
+</svg>

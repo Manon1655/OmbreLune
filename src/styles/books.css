@@ -1,0 +1,235 @@
+/* ===============================
+   CART CONTAINER
+================================= */
+
+/* empty cart state */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  text-align: center;
+  color: #1f4037;
+  padding: 40px 20px;
+}
+
+.cart-empty {
+  /* keep for backwards compatibility, but now delegates to generic */
+}
+
+.empty-state h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.empty-state p {
+  font-size: 18px;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.empty-state .btn-primary {
+  padding: 12px 28px;
+  font-size: 16px;
+}
+
+.empty-state .empty-icon {
+  width: 120px;
+  margin-bottom: 25px;
+  opacity: 0.6;
+}
+
+.cart-container {
+  max-width: 1300px;
+  margin: 60px auto;
+  padding: 0 20px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.cart-title {
+  font-size: 36px;
+  font-weight: 700;
+  color: #1F4037;
+  margin-bottom: 40px;
+}
+
+/* ===============================
+   LAYOUT
+================================= */
+
+.cart-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+}
+
+/* ===============================
+   CART CARD
+================================= */
+
+.cart-card {
+  display: grid;
+  grid-template-columns: 100px 1fr auto auto auto;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+  margin-bottom: 25px;
+  transition: 0.3s ease;
+}
+
+.cart-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(168,203,183,0.2);
+}
+
+.cart-image {
+  width: 80px;
+  border-radius: 10px;
+}
+
+/* ===============================
+   INFO
+================================= */
+
+.cart-info h3 {
+  margin: 0;
+  font-size: 18px;
+  color: #2c3e50;
+}
+
+.cart-info .author {
+  font-size: 14px;
+  color: #666;
+}
+
+.cart-info .price {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1f4037;
+}
+
+/* ===============================
+   QUANTITY BUTTONS (NEW DESIGN)
+================================= */
+
+.cart-quantity {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cart-quantity button {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  border: none;
+  background: #A8DDB5;
+  color: #1F4037;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cart-quantity input {
+  width: 50px;
+  text-align: center;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 5px;
+}
+
+/* ===============================
+   REMOVE BUTTON
+================================= */
+
+.btn-remove {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: #999;
+  transition: 0.3s ease;
+}
+
+.btn-remove:hover {
+  color: #e74c3c;
+  transform: scale(1.2);
+}
+
+/* ===============================
+   SUMMARY CARD
+================================= */
+
+.cart-summary {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 18px;
+  box-shadow: 0 10px 35px rgba(0,0,0,0.08);
+  height: fit-content;
+  position: sticky;
+  top: 100px;
+}
+
+.cart-summary h2 {
+  margin-bottom: 25px;
+  color: #1F4037;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.summary-total {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  font-size: 18px;
+  margin-top: 20px;
+  margin-bottom: 25px;
+  color: #1F4037;
+}
+
+/* ===============================
+   BUTTONS
+================================= */
+
+.btn-checkout {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: none;
+  background: #A8DDB5;
+  color: #1F4037;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-bottom: 15px;
+}
+
+.btn-checkout:hover {
+  background: #95D3A6;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  width: 100%;
+  margin-top: 15px;
+  padding: 12px;
+  border-radius: 10px;
+  border: 2px solid #a8cbb7;
+  background: transparent;
+  color: #1f4037;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: #a8cbb7;
+  color: white;
+}

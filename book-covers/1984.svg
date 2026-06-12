@@ -1,0 +1,40 @@
+<svg width="200" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#000000;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1A1A1A;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="grad2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#E8E8E8;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#E8E8E8;stop-opacity:0" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Book cover background -->
+  <rect width="200" height="300" fill="url(#grad1)"/>
+  
+  <!-- Eye watching -->
+  <circle cx="100" cy="80" r="35" fill="#333333" stroke="#E8E8E8" stroke-width="2"/>
+  <circle cx="100" cy="80" r="28" fill="#1A1A1A"/>
+  <circle cx="100" cy="80" r="22" fill="#E8E8E8" opacity="0.9"/>
+  <circle cx="102" cy="78" r="12" fill="#000000"/>
+  <circle cx="104" cy="76" r="4" fill="#E8E8E8" opacity="0.6"/>
+  
+  <!-- Surveillance lines -->
+  <line x1="20" y1="40" x2="180" y2="40" stroke="#E8E8E8" stroke-width="1" opacity="0.3"/>
+  <line x1="20" y1="120" x2="180" y2="120" stroke="#E8E8E8" stroke-width="1" opacity="0.3"/>
+  <line x1="30" y1="50" x2="170" y2="50" stroke="#E8E8E8" stroke-width="0.5" opacity="0.2"/>
+  
+  <!-- Binary/digital effect -->
+  <text x="20" y="160" font-family="monospace" font-size="8" fill="#E8E8E8" opacity="0.3">01010101</text>
+  <text x="140" y="160" font-family="monospace" font-size="8" fill="#E8E8E8" opacity="0.3">10101010</text>
+  
+  <!-- Title box -->
+  <rect x="10" y="200" width="180" height="90" fill="rgba(0,0,0,0.9)" rx="5"/>
+  <line x1="30" y1="208" x2="170" y2="208" stroke="#E8E8E8" stroke-width="1" opacity="0.4"/>
+  <line x1="30" y1="212" x2="170" y2="212" stroke="#E8E8E8" stroke-width="1" opacity="0.4"/>
+  
+  <text x="100" y="245" font-family="Georgia, serif" font-size="20" font-weight="bold" text-anchor="middle" fill="#E8E8E8">1984</text>
+  <text x="100" y="265" font-family="Georgia, serif" font-size="11" text-anchor="middle" fill="#999999">George Orwell</text>
+  <text x="100" y="280" font-family="Georgia, serif" font-size="8" text-anchor="middle" fill="#E8E8E8">Big Brother vous surveille</text>
+</svg>

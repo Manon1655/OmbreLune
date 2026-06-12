@@ -1,0 +1,146 @@
+[
+  {
+    "id": 1,
+    "title": "L'Alchimiste",
+    "author": "Paulo Coelho",
+    "description": "Un voyage initiatique vers la sagesse",
+    "price": 18.9,
+    "originalPrice": 22.9,
+    "cover": "https://images-na.ssl-images-amazon.com/images/P/0062315005.01.L.jpg",
+    "category": "Roman",
+    "rating": 4.5,
+    "reviews": 2341,
+    "isBestseller": true,
+    "preview": [
+      "Chapitre 1: Le Rêve Récurrent\nSantiago était un jeune berger qui rêvait depuis longtemps de voyager au-delà des montagnes qui entouraient son petit village. Chaque nuit, il fermait les yeux et imaginait les possibilités qui l'attendaient...",
+      "Chapitre 2: La Rencontre\nUn jour, il rencontra un vieux roi qui lui raconta une histoire sur une légendaire pyramide en Égypte. Ce roi possédait une sagesse ancienne et mystérieuse...",
+      "Chapitre 3: Le Voyage Commence\nSantiago décida de partir à la recherche de son trésor personnel. Il vendit ses moutons et commença un voyage qui changerait sa vie à jamais..."
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Dune",
+    "author": "Frank Herbert",
+    "description": "Une épopée de science-fiction intergalactique",
+    "price": 24.9,
+    "originalPrice": 24.9,
+    "cover": "https://images-na.ssl-images-amazon.com/images/P/0441172717.01.L.jpg",
+    "category": "Science-Fiction",
+    "rating": 5,
+    "reviews": 1567,
+    "isBestseller": true,
+    "preview": [
+      "Livre I: La Maison Atréides\nSur la planète Caladan, la famille Atréides prépare son départ. Le Duc Leto doit gouverner la planète Arrakis, le désert où germe l'épice précieuse...",
+      "Livre II: L'Arrivée sur Arrakis\nPaul et sa mère Lady Jessica arrivent sur Arrakis avec la conviction que c'est leur nouvelle maison. Mais le danger les attend à chaque coin de rue...",
+      "Livre III: L'Épreuve du Désert\nFuyant les attaques, Paul et Jessica se retrouvent seuls dans l'immensité du désert. Les Fremen les trouveront-ils? Et qui est vraiment Paul?"
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Le Seigneur des Anneaux",
+    "author": "J.R.R. Tolkien",
+    "description": "Une épopée fantastique incontournable",
+    "price": 32.9,
+    "originalPrice": 39.9,
+    "cover": "https://images-na.ssl-images-amazon.com/images/P/0544003411.01.L.jpg",
+    "category": "Fantasy",
+    "rating": 5,
+    "reviews": 6789,
+    "isBestseller": true,
+    "preview": [
+      "Le Prologue\nIl y a bien longtemps dans une contrée de l'Ouest... Dans le Comté paisible, le Hobbit Bilbo Sacquet possède un anneau d'or mystérieux...",
+      "Livre 1: La Communauté de l'Anneau\nFredon Sacquet découvre que cet anneau est bien plus dangereux qu'il ne l'imaginait. Il doit quitter le Comté avec l'anneau maudit...",
+      "Livre 2: Les Deux Tours\nLa Communauté se sépare. Frodon et Sam se dirigent vers la Montagne du Destin, tandis que les autres combattent pour les terres du Seigneur des Anneaux..."
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Orgueil & Préjugés",
+    "author": "Jane Austen",
+    "description": "Un roman d'amour et de mariage",
+    "price": 15.5,
+    "originalPrice": 15.5,
+    "cover": "https://images-na.ssl-images-amazon.com/images/P/0141439513.01.L.jpg",
+    "category": "Classique",
+    "rating": 4.5,
+    "reviews": 1200,
+    "isBestseller": false,
+    "preview": [
+      "Chapitre 1: Une Certitude Universelle\nC'est une vérité universellement reconnue qu'un homme célibataire en possession d'une belle fortune doit être en quête d'une épouse...",
+      "Chapitre 2: La Visite de Bingley\nM. Bingley arrive dans le voisinage, riche et charmant. Les familles de la région s'animent à l'idée qu'il soit un bon parti...",
+      "Chapitre 3: Le Bal\nLe bal arrive enfin. Bingley danse avec Jane Bennet, tandis que M. Darcy semble distant. Élisabeth ne peut s'empêcher de le trouver insuffisant..."
+    ]
+  },
+  {
+    "id": 5,
+    "title": "L'Alchimiste",
+    "author": "Paulo Coelho",
+    "description": "Un voyage initiatique vers la sagesse",
+    "price": 18.9,
+    "originalPrice": 22.9,
+    "cover": "https://images-na.ssl-images-amazon.com/images/P/0062315005.01.L.jpg",
+    "category": "Roman",
+    "rating": 4.5,
+    "reviews": 2341,
+    "isBestseller": true,
+    "preview": [
+      "Chapitre 1: Le Rêve Récurrent\nSantiago était un jeune berger qui rêvait depuis longtemps de voyager au-delà des montagnes qui entouraient son petit village. Chaque nuit, il fermait les yeux et imaginait les possibilités qui l'attendaient...",
+      "Chapitre 2: La Rencontre\nUn jour, il rencontra un vieux roi qui lui raconta une histoire sur une légendaire pyramide en Égypte. Ce roi possédait une sagesse ancienne et mystérieuse...",
+      "Chapitre 3: Le Voyage Commence\nSantiago décida de partir à la recherche de son trésor personnel. Il vendit ses moutons et commença un voyage qui changerait sa vie à jamais..."
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Dune",
+    "author": "Frank Herbert",
+    "description": "Une épopée de science-fiction intergalactique",
+    "price": 24.9,
+    "originalPrice": 24.9,
+    "cover": "https://images-na.ssl-images-amazon.com/images/P/0441172717.01.L.jpg",
+    "category": "Science-Fiction",
+    "rating": 5,
+    "reviews": 1567,
+    "isBestseller": true,
+    "preview": [
+      "Livre I: La Maison Atréides\nSur la planète Caladan, la famille Atréides prépare son départ. Le Duc Leto doit gouverner la planète Arrakis, le désert où germe l'épice précieuse...",
+      "Livre II: L'Arrivée sur Arrakis\nPaul et sa mère Lady Jessica arrivent sur Arrakis avec la conviction que c'est leur nouvelle maison. Mais le danger les attend à chaque coin de rue...",
+      "Livre III: L'Épreuve du Désert\nFuyant les attaques, Paul et Jessica se retrouvent seuls dans l'immensité du désert. Les Fremen les trouveront-ils? Et qui est vraiment Paul?"
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Le Seigneur des Anneaux",
+    "author": "J.R.R. Tolkien",
+    "description": "Une épopée fantastique incontournable",
+    "price": 32.9,
+    "originalPrice": 39.9,
+    "cover": "https://images-na.ssl-images-amazon.com/images/P/0544003411.01.L.jpg",
+    "category": "Fantasy",
+    "rating": 5,
+    "reviews": 6789,
+    "isBestseller": true,
+    "preview": [
+      "Le Prologue\nIl y a bien longtemps dans une contrée de l'Ouest... Dans le Comté paisible, le Hobbit Bilbo Sacquet possède un anneau d'or mystérieux...",
+      "Livre 1: La Communauté de l'Anneau\nFredon Sacquet découvre que cet anneau est bien plus dangereux qu'il ne l'imaginait. Il doit quitter le Comté avec l'anneau maudit...",
+      "Livre 2: Les Deux Tours\nLa Communauté se sépare. Frodon et Sam se dirigent vers la Montagne du Destin, tandis que les autres combattent pour les terres du Seigneur des Anneaux..."
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Orgueil & Préjugés",
+    "author": "Jane Austen",
+    "description": "Un roman d'amour et de mariage",
+    "price": 15.5,
+    "originalPrice": 15.5,
+    "cover": "https://images-na.ssl-images-amazon.com/images/P/0141439513.01.L.jpg",
+    "category": "Classique",
+    "rating": 4.5,
+    "reviews": 1200,
+    "isBestseller": false,
+    "preview": [
+      "Chapitre 1: Une Certitude Universelle\nC'est une vérité universellement reconnue qu'un homme célibataire en possession d'une belle fortune doit être en quête d'une épouse...",
+      "Chapitre 2: La Visite de Bingley\nM. Bingley arrive dans le voisinage, riche et charmant. Les familles de la région s'animent à l'idée qu'il soit un bon parti...",
+      "Chapitre 3: Le Bal\nLe bal arrive enfin. Bingley danse avec Jane Bennet, tandis que M. Darcy semble distant. Élisabeth ne peut s'empêcher de le trouver insuffisant..."
+    ]
+  }
+]
