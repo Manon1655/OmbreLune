@@ -121,12 +121,12 @@ export default function Home() {
   );
 
   return (
-    <div className="home">
+    <main className="home">
 
       {/* ════════════════════════════════════════
           HERO — split editorial
       ════════════════════════════════════════ */}
-      <section className="hero">
+      <header className="hero" role="banner" aria-label="Bannière d'accueil">
 
         {/* Left */}
         <div className="hero__left">
@@ -151,15 +151,16 @@ export default function Home() {
           </p>
 
           {/* Search */}
-          <div className="hero__search">
+          <div className="hero__search" role="search" aria-label="Recherche de livres">
             <IcSearch />
             <input
+              aria-label="Rechercher un titre, auteur ou genre"
               value={search}
               onChange={e => setSearch(e.target.value)}
               onKeyDown={e => e.key === "Enter" && handleSearch()}
               placeholder="Titre, auteur, genre…"
             />
-            <button className="hero__search-btn" onClick={handleSearch}>Chercher</button>
+            <button className="hero__search-btn" onClick={handleSearch} aria-label="Lancer la recherche">Chercher</button>
           </div>
 
           {/* Chips */}
@@ -197,7 +198,7 @@ export default function Home() {
           </div>
         </div>
 
-      </section>
+      </header>
 
       {/* ════════════════════════════════════════
           PROMO
@@ -214,7 +215,7 @@ export default function Home() {
           MAGAZINE GRID — COUPS DE CŒUR
           (asymmetric editorial layout)
       ════════════════════════════════════════ */}
-      <section className="section section--ivory">
+      <section className="section section--ivory" role="region" aria-label="Sélection coups de coeur">
         <div className="inner">
           <div className="sec-head">
             <div>
@@ -271,7 +272,7 @@ export default function Home() {
       {/* ════════════════════════════════════════
           NOUVEAUTÉS — featured + numbered list
       ════════════════════════════════════════ */}
-      <section className="section">
+      <section className="section" role="region" aria-label="Nouveautes">
         <div className="inner">
           <div className="sec-head">
             <div>
@@ -338,7 +339,7 @@ export default function Home() {
       {/* ════════════════════════════════════════
           HUMEUR — tabbed mood filter
       ════════════════════════════════════════ */}
-      <section className="section section--ivory">
+      <section className="section section--ivory" role="region" aria-label="Humeurs et recommandations">
         <div className="inner">
           <div className="sec-head">
             <div>
@@ -371,7 +372,7 @@ export default function Home() {
       {/* ════════════════════════════════════════
           TOUTE LA COLLECTION — carousel paginé
       ════════════════════════════════════════ */}
-      <section className="section">
+      <section className="section" role="region" aria-label="Collection complète">
         <div className="inner">
           <div className="sec-head">
             <div>
@@ -402,7 +403,7 @@ export default function Home() {
       {/* ════════════════════════════════════════
           TÉMOIGNAGES — fond sombre
       ════════════════════════════════════════ */}
-      <section className="section section--dark">
+      <section className="section section--dark" role="region" aria-label="Temoignages lecteurs">
         <div className="inner">
           <div className="sec-head sec-head--center" style={{ marginBottom: 52 }}>
             <p className="sec-eyebrow">Ils nous font confiance</p>
@@ -427,7 +428,7 @@ export default function Home() {
       {/* ════════════════════════════════════════
           CTA FINALE
       ════════════════════════════════════════ */}
-      <section className="cta-section">
+      <section className="cta-section" role="region" aria-label="Appel à l'action">
         <div className="inner">
           <span className="cta-ornament">❧</span>
 
@@ -454,6 +455,6 @@ export default function Home() {
         </div>
       </section>
 
-    </div>
+    </main>
   );
 }
